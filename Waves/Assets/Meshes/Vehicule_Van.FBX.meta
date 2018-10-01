@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: aee7c09f70705f44d8bdeac4e275c941
+timeCreated: 1484986510
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box002
+    100002: Cylinder001
+    100004: Cylinder007
+    100006: Cylinder009
+    100008: Cylinder017
+    100010: Cylinder018
+    100012: Object001
+    100014: Object002
+    100016: Object003
+    100018: Phares_arr
+    100020: Plane001
+    100022: Plane003
+    100024: Point001
+    100026: Point002
+    100028: Roue_arr_jante
+    100030: Roue_arr_pneu
+    100032: Van_carosserie
+    100034: //RootNode
+    100036: Vehicule_Van_carosserie
+    100038: Vehicule_Van_ParesChocs_Av_Arr
+    100040: Vehicule_Van_Phares_arr
+    100042: Vehicule_Van_Phares_Av
+    100044: Vehicule_Van_PlaquesImmatriculation
+    100046: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    100048: Vehicule_Van_porteBagages
+    100050: "Vehicule_Van_Portes_cot\xE9s"
+    100052: Vehicule_Van_Roue_arr_jante
+    100054: Vehicule_Van_Roue_arr_pneu
+    100056: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    100058: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    100060: "Vehicule_Van_R\xE9troviseurs"
+    400000: Box002
+    400002: Cylinder001
+    400004: Cylinder007
+    400006: Cylinder009
+    400008: Cylinder017
+    400010: Cylinder018
+    400012: Object001
+    400014: Object002
+    400016: Object003
+    400018: Phares_arr
+    400020: Plane001
+    400022: Plane003
+    400024: Point001
+    400026: Point002
+    400028: Roue_arr_jante
+    400030: Roue_arr_pneu
+    400032: Van_carosserie
+    400034: //RootNode
+    400036: Vehicule_Van_carosserie
+    400038: Vehicule_Van_ParesChocs_Av_Arr
+    400040: Vehicule_Van_Phares_arr
+    400042: Vehicule_Van_Phares_Av
+    400044: Vehicule_Van_PlaquesImmatriculation
+    400046: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    400048: Vehicule_Van_porteBagages
+    400050: "Vehicule_Van_Portes_cot\xE9s"
+    400052: Vehicule_Van_Roue_arr_jante
+    400054: Vehicule_Van_Roue_arr_pneu
+    400056: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    400058: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    400060: "Vehicule_Van_R\xE9troviseurs"
+    2300000: Box002
+    2300002: Cylinder001
+    2300004: Cylinder007
+    2300006: Cylinder009
+    2300008: Cylinder017
+    2300010: Cylinder018
+    2300012: Object001
+    2300014: Object002
+    2300016: Object003
+    2300018: Phares_arr
+    2300020: Plane001
+    2300022: Plane003
+    2300024: Roue_arr_jante
+    2300026: Roue_arr_pneu
+    2300028: Van_carosserie
+    2300030: Vehicule_Van_carosserie
+    2300032: Vehicule_Van_ParesChocs_Av_Arr
+    2300034: Vehicule_Van_Phares_arr
+    2300036: Vehicule_Van_Phares_Av
+    2300038: Vehicule_Van_PlaquesImmatriculation
+    2300040: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    2300042: Vehicule_Van_porteBagages
+    2300044: "Vehicule_Van_Portes_cot\xE9s"
+    2300046: Vehicule_Van_Roue_arr_jante
+    2300048: Vehicule_Van_Roue_arr_pneu
+    2300050: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    2300052: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    2300054: "Vehicule_Van_R\xE9troviseurs"
+    3300000: Box002
+    3300002: Cylinder001
+    3300004: Cylinder007
+    3300006: Cylinder009
+    3300008: Cylinder017
+    3300010: Cylinder018
+    3300012: Object001
+    3300014: Object002
+    3300016: Object003
+    3300018: Phares_arr
+    3300020: Plane001
+    3300022: Plane003
+    3300024: Roue_arr_jante
+    3300026: Roue_arr_pneu
+    3300028: Van_carosserie
+    3300030: Vehicule_Van_carosserie
+    3300032: Vehicule_Van_ParesChocs_Av_Arr
+    3300034: Vehicule_Van_Phares_arr
+    3300036: Vehicule_Van_Phares_Av
+    3300038: Vehicule_Van_PlaquesImmatriculation
+    3300040: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    3300042: Vehicule_Van_porteBagages
+    3300044: "Vehicule_Van_Portes_cot\xE9s"
+    3300046: Vehicule_Van_Roue_arr_jante
+    3300048: Vehicule_Van_Roue_arr_pneu
+    3300050: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    3300052: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    3300054: "Vehicule_Van_R\xE9troviseurs"
+    4300000: Van_carosserie
+    4300002: Cylinder007
+    4300004: Cylinder009
+    4300006: Roue_arr_pneu
+    4300008: Phares_arr
+    4300010: Plane001
+    4300012: Cylinder017
+    4300014: Box002
+    4300016: Object001
+    4300018: Plane003
+    4300020: Roue_arr_jante
+    4300022: Object002
+    4300024: Cylinder001
+    4300026: Cylinder018
+    4300028: Object003
+    4300030: Vehicule_Van_carosserie
+    4300032: Vehicule_Van_porteBagages
+    4300034: Vehicule_Van_Phares_Av
+    4300036: Vehicule_Van_Roue_arr_pneu
+    4300038: Vehicule_Van_Phares_arr
+    4300040: "Vehicule_Van_R\xE9troviseurs"
+    4300042: Vehicule_Van_ParesChocs_Av_Arr
+    4300044: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    4300046: "Vehicule_Van_Portes_cot\xE9s"
+    4300048: Vehicule_Van_PlaquesImmatriculation
+    4300050: Vehicule_Van_Roue_arr_jante
+    4300052: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    4300054: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

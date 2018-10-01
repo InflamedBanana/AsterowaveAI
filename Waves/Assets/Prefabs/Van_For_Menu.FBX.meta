@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: fb370a703562b724cafa3bf2dd494049
+timeCreated: 1485042052
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Vehicule_Van_carosserie
+    100004: Vehicule_Van_ParesChocs_Av_Arr
+    100006: Vehicule_Van_Phares_arr
+    100008: Vehicule_Van_Phares_Av
+    100010: Vehicule_Van_PlaquesImmatriculation
+    100012: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    100014: Vehicule_Van_porteBagages
+    100016: "Vehicule_Van_Portes_cot\xE9s"
+    100018: Vehicule_Van_Roue_arr_jante
+    100020: Vehicule_Van_Roue_arr_pneu
+    100022: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    100024: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    100026: "Vehicule_Van_R\xE9troviseurs"
+    100028: Vehicule_Van_Vitre_Av
+    400000: //RootNode
+    400002: Vehicule_Van_carosserie
+    400004: Vehicule_Van_ParesChocs_Av_Arr
+    400006: Vehicule_Van_Phares_arr
+    400008: Vehicule_Van_Phares_Av
+    400010: Vehicule_Van_PlaquesImmatriculation
+    400012: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    400014: Vehicule_Van_porteBagages
+    400016: "Vehicule_Van_Portes_cot\xE9s"
+    400018: Vehicule_Van_Roue_arr_jante
+    400020: Vehicule_Van_Roue_arr_pneu
+    400022: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    400024: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    400026: "Vehicule_Van_R\xE9troviseurs"
+    400028: Vehicule_Van_Vitre_Av
+    2300000: Vehicule_Van_carosserie
+    2300002: Vehicule_Van_ParesChocs_Av_Arr
+    2300004: Vehicule_Van_Phares_arr
+    2300006: Vehicule_Van_Phares_Av
+    2300008: Vehicule_Van_PlaquesImmatriculation
+    2300010: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    2300012: Vehicule_Van_porteBagages
+    2300014: "Vehicule_Van_Portes_cot\xE9s"
+    2300016: Vehicule_Van_Roue_arr_jante
+    2300018: Vehicule_Van_Roue_arr_pneu
+    2300020: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    2300022: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    2300024: "Vehicule_Van_R\xE9troviseurs"
+    2300026: Vehicule_Van_Vitre_Av
+    3300000: Vehicule_Van_carosserie
+    3300002: Vehicule_Van_ParesChocs_Av_Arr
+    3300004: Vehicule_Van_Phares_arr
+    3300006: Vehicule_Van_Phares_Av
+    3300008: Vehicule_Van_PlaquesImmatriculation
+    3300010: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    3300012: Vehicule_Van_porteBagages
+    3300014: "Vehicule_Van_Portes_cot\xE9s"
+    3300016: Vehicule_Van_Roue_arr_jante
+    3300018: Vehicule_Van_Roue_arr_pneu
+    3300020: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    3300022: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    3300024: "Vehicule_Van_R\xE9troviseurs"
+    3300026: Vehicule_Van_Vitre_Av
+    4300000: Vehicule_Van_carosserie
+    4300002: Vehicule_Van_porteBagages
+    4300004: Vehicule_Van_Phares_Av
+    4300006: Vehicule_Van_Roue_arr_pneu
+    4300008: Vehicule_Van_Phares_arr
+    4300010: "Vehicule_Van_R\xE9troviseurs"
+    4300012: Vehicule_Van_ParesChocs_Av_Arr
+    4300014: "Vehicule_Van_Poign\xE9es_lat\xE9rales"
+    4300016: "Vehicule_Van_Portes_cot\xE9s"
+    4300018: Vehicule_Van_PlaquesImmatriculation
+    4300020: Vehicule_Van_Roue_arr_jante
+    4300022: "Vehicule_Van_Roues_lat\xE9rales_pneus"
+    4300024: "Vehicule_Van_Roues_lat\xE9rales_jantes"
+    4300026: Vehicule_Van_Vitre_Av
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

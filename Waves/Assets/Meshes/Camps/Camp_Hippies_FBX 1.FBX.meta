@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 0bf318eb145e17a4e950dc17551315db
+timeCreated: 1485005826
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camp_Hippie_generateurs_glands
+    100002: Camp_Hippie_generateurs_poteaux
+    100004: "Camp_Hippie_GrandeTente_entr\xE9e01"
+    100006: "Camp_Hippie_Grandetente_entr\xE9e02"
+    100008: Camp_Hippie_GrandeTente_parois
+    100010: Camp_Hippie_GrandeTente_poteaux
+    100012: Camp_Hippie_Grandetente_Toiles_01
+    100014: Camp_Hippie_Grandetente_Toiles_02
+    100016: Camp_Hippie_Grandetente_Toit
+    100018: "Camp_Hippie_G\xE9n\xE9rateurs_Moteurs"
+    100020: Camp_Hippie_Jantes
+    100022: Camp_Hippie_PareChocs
+    100024: Camp_Hippie_PetiteTente_Poteaux
+    100026: Camp_Hippie_PetiteTente_Toile
+    100028: Camp_Hippie_Pneus
+    100030: Camp_Hippie_Pontons
+    100032: Camp_Hippie_Sol
+    100034: Camp_Hippie_Van_Carosserie
+    100036: Camp_Hippie_Van_Phares
+    100038: Camp_Hippie_Van_PlaqueImmatriculation
+    100040: "Camp_Hippie_Van_poign\xE9es"
+    100042: Camp_Hippie_Van_PorteBagages
+    100044: Camp_Hippie_Van_Portes
+    100046: Camp_Hippie_van_poteaux
+    100048: "Camp_Hippie_Van_R\xE9troviseurs"
+    100050: Camp_Hippie_Van_Toile
+    100052: //RootNode
+    400000: Camp_Hippie_generateurs_glands
+    400002: Camp_Hippie_generateurs_poteaux
+    400004: "Camp_Hippie_GrandeTente_entr\xE9e01"
+    400006: "Camp_Hippie_Grandetente_entr\xE9e02"
+    400008: Camp_Hippie_GrandeTente_parois
+    400010: Camp_Hippie_GrandeTente_poteaux
+    400012: Camp_Hippie_Grandetente_Toiles_01
+    400014: Camp_Hippie_Grandetente_Toiles_02
+    400016: Camp_Hippie_Grandetente_Toit
+    400018: "Camp_Hippie_G\xE9n\xE9rateurs_Moteurs"
+    400020: Camp_Hippie_Jantes
+    400022: Camp_Hippie_PareChocs
+    400024: Camp_Hippie_PetiteTente_Poteaux
+    400026: Camp_Hippie_PetiteTente_Toile
+    400028: Camp_Hippie_Pneus
+    400030: Camp_Hippie_Pontons
+    400032: Camp_Hippie_Sol
+    400034: Camp_Hippie_Van_Carosserie
+    400036: Camp_Hippie_Van_Phares
+    400038: Camp_Hippie_Van_PlaqueImmatriculation
+    400040: "Camp_Hippie_Van_poign\xE9es"
+    400042: Camp_Hippie_Van_PorteBagages
+    400044: Camp_Hippie_Van_Portes
+    400046: Camp_Hippie_van_poteaux
+    400048: "Camp_Hippie_Van_R\xE9troviseurs"
+    400050: Camp_Hippie_Van_Toile
+    400052: //RootNode
+    2300000: Camp_Hippie_generateurs_glands
+    2300002: Camp_Hippie_generateurs_poteaux
+    2300004: "Camp_Hippie_GrandeTente_entr\xE9e01"
+    2300006: "Camp_Hippie_Grandetente_entr\xE9e02"
+    2300008: Camp_Hippie_GrandeTente_parois
+    2300010: Camp_Hippie_GrandeTente_poteaux
+    2300012: Camp_Hippie_Grandetente_Toiles_01
+    2300014: Camp_Hippie_Grandetente_Toiles_02
+    2300016: Camp_Hippie_Grandetente_Toit
+    2300018: "Camp_Hippie_G\xE9n\xE9rateurs_Moteurs"
+    2300020: Camp_Hippie_Jantes
+    2300022: Camp_Hippie_PareChocs
+    2300024: Camp_Hippie_PetiteTente_Poteaux
+    2300026: Camp_Hippie_PetiteTente_Toile
+    2300028: Camp_Hippie_Pneus
+    2300030: Camp_Hippie_Pontons
+    2300032: Camp_Hippie_Sol
+    2300034: Camp_Hippie_Van_Carosserie
+    2300036: Camp_Hippie_Van_Phares
+    2300038: Camp_Hippie_Van_PlaqueImmatriculation
+    2300040: "Camp_Hippie_Van_poign\xE9es"
+    2300042: Camp_Hippie_Van_PorteBagages
+    2300044: Camp_Hippie_Van_Portes
+    2300046: Camp_Hippie_van_poteaux
+    2300048: "Camp_Hippie_Van_R\xE9troviseurs"
+    2300050: Camp_Hippie_Van_Toile
+    3300000: Camp_Hippie_generateurs_glands
+    3300002: Camp_Hippie_generateurs_poteaux
+    3300004: "Camp_Hippie_GrandeTente_entr\xE9e01"
+    3300006: "Camp_Hippie_Grandetente_entr\xE9e02"
+    3300008: Camp_Hippie_GrandeTente_parois
+    3300010: Camp_Hippie_GrandeTente_poteaux
+    3300012: Camp_Hippie_Grandetente_Toiles_01
+    3300014: Camp_Hippie_Grandetente_Toiles_02
+    3300016: Camp_Hippie_Grandetente_Toit
+    3300018: "Camp_Hippie_G\xE9n\xE9rateurs_Moteurs"
+    3300020: Camp_Hippie_Jantes
+    3300022: Camp_Hippie_PareChocs
+    3300024: Camp_Hippie_PetiteTente_Poteaux
+    3300026: Camp_Hippie_PetiteTente_Toile
+    3300028: Camp_Hippie_Pneus
+    3300030: Camp_Hippie_Pontons
+    3300032: Camp_Hippie_Sol
+    3300034: Camp_Hippie_Van_Carosserie
+    3300036: Camp_Hippie_Van_Phares
+    3300038: Camp_Hippie_Van_PlaqueImmatriculation
+    3300040: "Camp_Hippie_Van_poign\xE9es"
+    3300042: Camp_Hippie_Van_PorteBagages
+    3300044: Camp_Hippie_Van_Portes
+    3300046: Camp_Hippie_van_poteaux
+    3300048: "Camp_Hippie_Van_R\xE9troviseurs"
+    3300050: Camp_Hippie_Van_Toile
+    4300000: "Camp_Hippie_Grandetente_entr\xE9e02"
+    4300002: Camp_Hippie_Grandetente_Toiles_02
+    4300004: Camp_Hippie_Grandetente_Toiles_01
+    4300006: Camp_Hippie_Van_Phares
+    4300008: Camp_Hippie_Van_Toile
+    4300010: Camp_Hippie_Sol
+    4300012: Camp_Hippie_van_poteaux
+    4300014: Camp_Hippie_GrandeTente_poteaux
+    4300016: Camp_Hippie_PetiteTente_Toile
+    4300018: Camp_Hippie_PetiteTente_Poteaux
+    4300020: Camp_Hippie_generateurs_poteaux
+    4300022: "Camp_Hippie_G\xE9n\xE9rateurs_Moteurs"
+    4300024: Camp_Hippie_generateurs_glands
+    4300026: Camp_Hippie_Pontons
+    4300028: Camp_Hippie_GrandeTente_parois
+    4300030: Camp_Hippie_Jantes
+    4300032: Camp_Hippie_Van_Carosserie
+    4300034: Camp_Hippie_Van_Portes
+    4300036: Camp_Hippie_PareChocs
+    4300038: "Camp_Hippie_Van_R\xE9troviseurs"
+    4300040: Camp_Hippie_Pneus
+    4300042: Camp_Hippie_Van_PlaqueImmatriculation
+    4300044: "Camp_Hippie_Van_poign\xE9es"
+    4300046: Camp_Hippie_Van_PorteBagages
+    4300048: Camp_Hippie_Grandetente_Toit
+    4300050: "Camp_Hippie_GrandeTente_entr\xE9e01"
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
