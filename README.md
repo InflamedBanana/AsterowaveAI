@@ -12,4 +12,4 @@ The ML-agents library isn't included in the repository.
 I will update the progress here :
 
 - Almost set up :
-[progress_01](progress/progress_01)
+[progress_01](progress/progress_01.gif)
