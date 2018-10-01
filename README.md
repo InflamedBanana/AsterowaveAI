@@ -5,6 +5,8 @@ The original game can be downloaded [here](https://globalgamejam.org/2017/games/
 
 I stripped all unnecessary or too complicated features like bonuses etc, to make it simpler at first.
 
+The ML-agents library isn't included in the repository.
+
 ### Progress :
 
 I will update the progress here :
