@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -18,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
 	[SerializeField] float shockWaveOffset;
 
 	float shockWaveCharge;
+	public float normalizedCharge { get { return shockWaveCharge / maxLoadValue; } }
 
 	Coroutine loadRoutine, showRoutine, hideRoutine;
 
@@ -28,6 +28,8 @@ public class PlayerAttack : MonoBehaviour
 
 	public Action onLoadWave;
 	public Action onShockWave;
+
+	public bool isCharging { get { return loadRoutine != null; } }
 
 	void Start()
 	{
@@ -78,20 +80,21 @@ public class PlayerAttack : MonoBehaviour
 			}
 			if( hideRoutine == null )
 				hideRoutine = StartCoroutine( Hide() );
+
+			if( attractObjects && attractCollider != null )
+			{
+				attractCollider.radius = 0.01f;
+				foreach( AimantFX fx in GetComponentsInChildren<AimantFX>() )
+					fx.EndEffect();
+			}
+
+			GameObject shockWave = Instantiate( shockWavePrefab, transform.position + new Vector3( 0.0f, 0.0f, shockWaveOffset ), shockWavePrefab.transform.rotation ) as GameObject;
+
+			shockWave.GetComponent<ShockWave>().Init( Mathf.Clamp( shockWaveCharge, 0, maxLoadValue ) / maxLoadValue );
+
+			shockWaveCharge = 0;
 		}
 
-		if( attractObjects && attractCollider != null )
-		{
-			attractCollider.radius = 0.01f;
-			foreach( AimantFX fx in GetComponentsInChildren<AimantFX>() )
-				fx.EndEffect();
-		}
-
-		GameObject shockWave = Instantiate( shockWavePrefab, transform.position + new Vector3( 0.0f, 0.0f, shockWaveOffset ), shockWavePrefab.transform.rotation ) as GameObject;
-
-		shockWave.GetComponent<ShockWave>().Init( Mathf.Clamp( shockWaveCharge, 0, maxLoadValue ) / maxLoadValue );
-
-		shockWaveCharge = 0;
 	}
 
 	IEnumerator Show()

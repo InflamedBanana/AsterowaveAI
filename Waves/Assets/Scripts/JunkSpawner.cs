@@ -6,7 +6,10 @@ public class JunkSpawner : MonoBehaviourSingleton<JunkSpawner>
 	[Header( "Junks" )]
 	[SerializeField] List <GameObject> junkPrefabs = new List<GameObject>();
 	[SerializeField] GameObject junkDestroyPrefab;
-	[HideInInspector]public List <GameObject> junkSpawned = new List<GameObject>();
+	[HideInInspector]private List <Junk> m_junkSpawned = new List<Junk>();
+
+	public int junkCount { get { return m_junkSpawned.Count; } }
+	public Junk GetJunk( int _index ) { return m_junkSpawned[ _index ]; }
 
 	[Header( "Refs" )]
 	[SerializeField] Transform goalRef;
@@ -43,7 +46,7 @@ public class JunkSpawner : MonoBehaviourSingleton<JunkSpawner>
 
 		junkCadence += Time.deltaTime;
 
-		if( junkSpawned.Count == maxJunkCount || junkCadence < junkSpawnCadence )
+		if( m_junkSpawned.Count == maxJunkCount || junkCadence < junkSpawnCadence )
 			return;
 
 		SpawnJunk();
@@ -61,46 +64,53 @@ public class JunkSpawner : MonoBehaviourSingleton<JunkSpawner>
 			int randUpOrDown = Random.Range( 0, 2 );
 			
 			if( randUpOrDown == 0 )
-				junk = Instantiate( junkToSpawn, downSpawner.position, junkToSpawn.transform.rotation ) as GameObject;
+				junk = Instantiate( junkToSpawn, downSpawner.position, junkToSpawn.transform.rotation );
 			else
-				junk = Instantiate( junkToSpawn, upSpawner.position, junkToSpawn.transform.rotation ) as GameObject;
+				junk = Instantiate( junkToSpawn, upSpawner.position, junkToSpawn.transform.rotation );
 		}
 		else
 		{
 			if( goalRef.transform.position.y >= 0 )
-				junk = Instantiate( junkToSpawn, downSpawner.position, junkToSpawn.transform.rotation ) as GameObject;
+				junk = Instantiate( junkToSpawn, downSpawner.position, junkToSpawn.transform.rotation );
 			else
-				junk = Instantiate( junkToSpawn, upSpawner.position, junkToSpawn.transform.rotation ) as GameObject;
+				junk = Instantiate( junkToSpawn, upSpawner.position, junkToSpawn.transform.rotation );
 		}
 
 		Vector3 force = -junk.transform.position.normalized;
 		force = force.WithX( Random.Range( -1.0f, 1.0f ) );
 		force.Normalize();
 		force *= spawnForceIntensity;
-		junk.GetComponent<Rigidbody>().AddForce( force, ForceMode.Impulse );
+		//junk.GetComponent<Rigidbody>().AddForce( force, ForceMode.Impulse );
 		junk.GetComponent<Rigidbody>().AddTorque( new Vector3( Random.Range( 0f, 1f ), Random.Range( 0f, 1f ), Random.Range( 0f, 1f ) ) * 50 );
 
 		junk.transform.localScale *= Random.Range( 1f, 1.5f );
 
-		junkSpawned.Add( junk );
+		m_junkSpawned.Add( junk.GetComponent<Junk>() );
 		junk.GetComponent<Junk>().OnDestroyAct += RemoveJunk;
 	}
 
 	public void CleanJunks()
 	{
-		foreach( GameObject junk in junkSpawned )
-			Destroy( junk );
+		foreach( Junk junk in m_junkSpawned )
+			Destroy( junk.gameObject );
 
-		junkSpawned.Clear();
+		m_junkSpawned.Clear();
 		junkCadence = 0;
+
+		SpawnJunk();
 	}
 
-	void RemoveJunk( GameObject g )
+	void RemoveJunk( BounceableObject g )
 	{
-		if( junkSpawned.Contains( g ) )
+		if( g is Junk )
 		{
-			Instantiate( junkDestroyPrefab, g.transform.position, junkDestroyPrefab.transform.rotation );
-			junkSpawned.Remove( g );
+			var junk = (Junk)g;
+
+			if( m_junkSpawned.Contains( junk ) )
+			{
+				Instantiate( junkDestroyPrefab, junk.transform.position, junkDestroyPrefab.transform.rotation );
+				m_junkSpawned.Remove( junk );
+			}
 		}
 	}
 }

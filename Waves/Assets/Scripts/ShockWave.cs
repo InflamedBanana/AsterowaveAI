@@ -41,7 +41,8 @@ public class ShockWave : MonoBehaviour
 		if( _coll.GetComponent<BounceableObject>() == null || m_myAgent == null )
 			return;
 
-		m_myAgent.AddReward( .3f );
+		Debug.Log( "agent hit" );
+		m_myAgent.AddReward( .1f );
 	}
 
 	public void Init( float chargePercentage, ShipsAgent _agent = null )

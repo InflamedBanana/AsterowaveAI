@@ -191,54 +191,61 @@ public class Goal : MonoBehaviour
 
 	void PlayersAddReward( float _value, List<GameObject> _players )
 	{
-		foreach( GameObject go in _players )
-			if( go.GetComponent<ShipsAgent>() != null )
-				go.GetComponent<ShipsAgent>().AddReward( _value );
+		//foreach( GameObject go in _players )
+		//	if( go.GetComponent<ShipsAgent>() != null )
+		//		go.GetComponent<ShipsAgent>().AddReward( _value );
 	}
 
 	void TakeDamage()
 	{
-		if( isInvulnerable )
-			return;
+		//if( isInvulnerable )
+		//	return;
 
-		PlayersAddReward( -.2f, myPlayers );
-		PlayersAddReward( .5f, ennemies );
+		foreach( GameObject go in myPlayers )
+			if( go.GetComponent<ShipsAgent>() != null )
+				go.GetComponent<ShipsAgent>().PlayerLoose();
 
-		CameraUtils.Instance.Shake( 0.2f, 0.2f );
+		foreach( GameObject go in ennemies )
+			if( go.GetComponent<ShipsAgent>() != null )
+				go.GetComponent<ShipsAgent>().PlayerWin();
 
-		if( collectibles.HasShield )
-		{
-			collectibles.LooseShield();
-			return;
-		}
-		if( collectibles.IsGrowthed )
-			collectibles.InverseGrow();
-		else if( collectibles.IsShrinked )
-			collectibles.RegrowBase();
+		ShipsAcademy.Instance.AcademyReset();
 
-		life--;
+		//CameraUtils.Instance.Shake( 0.2f, 0.2f );
 
-		if( basesMeshes.Length > 0 )
-		{
-			if( life == maxLife - ( maxLife / 3 ) )
-			{
-				basesMeshes[0].SetActive( false );
-				basesMeshes[1].SetActive( true );
-			}
-			else if( life == maxLife / 3 )
-			{
-				basesMeshes[1].SetActive( false );
-				basesMeshes[2].SetActive( true );
-			}
-		}
+		//if( collectibles.HasShield )
+		//{
+		//	collectibles.LooseShield();
+		//	return;
+		//}
+		//if( collectibles.IsGrowthed )
+		//	collectibles.InverseGrow();
+		//else if( collectibles.IsShrinked )
+		//	collectibles.RegrowBase();
 
-		if( life <= 0 )
-		{
-			Death();
-			return;
-		}
+		//life--;
 
-		StartCoroutine( Invulnerability() );
+		//if( basesMeshes.Length > 0 )
+		//{
+		//	if( life == maxLife - ( maxLife / 3 ) )
+		//	{
+		//		basesMeshes[0].SetActive( false );
+		//		basesMeshes[1].SetActive( true );
+		//	}
+		//	else if( life == maxLife / 3 )
+		//	{
+		//		basesMeshes[1].SetActive( false );
+		//		basesMeshes[2].SetActive( true );
+		//	}
+		//}
+
+		//if( life <= 0 )
+		//{
+		//	Death();
+		//	return;
+		//}
+
+		//StartCoroutine( Invulnerability() );
 	}
 
 	void SetStringScore()
@@ -254,7 +261,7 @@ public class Goal : MonoBehaviour
 
 		foreach( GameObject go in myPlayers )
 			if( go.GetComponent<ShipsAgent>() != null )
-				go.GetComponent<ShipsAgent>().PlayerDone();
+				go.GetComponent<ShipsAgent>().PlayerLoose();
 
 		foreach( GameObject go in ennemies )
 			if( go.GetComponent<ShipsAgent>() != null )

@@ -8,9 +8,9 @@ public class PlayerMoves : MonoBehaviour
 	[SerializeField] float maxSpeed;
 	[SerializeField] ParticleSystem confuseFX;
 	//PlayerInputs inputs;
-	Rigidbody body;
+	Rigidbody m_body;
 
-	public Rigidbody rigidbody { get { return body; } }
+	public Rigidbody body { get { return m_body; } }
 
 	int inputDir = 1;
 
@@ -18,25 +18,25 @@ public class PlayerMoves : MonoBehaviour
 	{
 		//inputs = GetComponent<PlayerInputs> ();
 
-		body = GetComponent<Rigidbody>();
+		m_body = GetComponent<Rigidbody>();
 
 		//EnableMoves ( true );
 	}
 
 	public void Move( Vector2 direction )
 	{
-		body.AddForce( direction * acceleration * inputDir, ForceMode.Acceleration );
+		m_body.AddForce( direction * acceleration * inputDir, ForceMode.Acceleration );
 
 		if( direction != Vector2.zero )
 			transform.rotation = Quaternion.LookRotation( direction, -Vector3.forward );
 
-		body.velocity = Vector3.ClampMagnitude( body.velocity, maxSpeed );
+		m_body.velocity = Vector3.ClampMagnitude( m_body.velocity, maxSpeed );
 	}
 
 	public void InverseDir( bool enable )
 	{
 		if( enable )
-		{
+		{ 
 			confuseFX.Play();
 			inputDir = -1;
 		}

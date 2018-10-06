@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using MLAgents;
 
 public class ShipsAgent : Agent
@@ -12,7 +10,7 @@ public class ShipsAgent : Agent
 	PlayerMoves moves = null;
 	PlayerAttack attacks = null;
 
-	bool isCharging = false;
+	bool m_isCharging = false;
 
 	private void Awake()
 	{
@@ -34,81 +32,65 @@ public class ShipsAgent : Agent
 	public override void CollectObservations()
 	{
 		//Goal state :
-		Goal.GoalState goalState = m_myGoal.GetCurrentState();
-		AddVectorObs( goalState.health / goalState.maxHealth );
-		AddVectorObs( goalState.hasShield );
-		AddVectorObs( goalState.isGrowthed );
-		AddVectorObs( goalState.isInversed );
-		AddVectorObs( goalState.isInvulnerable );
-		AddVectorObs( goalState.isShrinked );
-//		AddVectorObs( m_myGoal.transform.position );
-		AddVectorObs( new Vector2( ( m_myGoal.transform.position.x - 19.69f ) / ( 19.69f * 2f ), ( m_myGoal.transform.position.y + 11 ) / 22f ) );
+		//Goal.GoalState goalState = m_myGoal.GetCurrentState();
+		//AddVectorObs( goalState.health / goalState.maxHealth ); don't care
+		//AddVectorObs( goalState.hasShield ); // maybelater
+		//AddVectorObs( goalState.isGrowthed );	// maybelater
+		//AddVectorObs( goalState.isInversed );	// maybelater
+		//AddVectorObs( goalState.isInvulnerable );	// maybelater
+		//AddVectorObs( goalState.isShrinked );	// maybelater
+
+		//agent
 		AddVectorObs( (int)m_myGoal.Team );
-		// x -19.69  +  Y 11 
-		//others goal state
-		goalState = m_othersGoal.GetCurrentState();
-		AddVectorObs( goalState.health );
-		AddVectorObs( new Vector2( ( m_othersGoal.transform.position.x - 19.69f ) / ( 19.69f * 2f ), ( m_othersGoal.transform.position.y + 11 ) / 22f ) );
-//		AddVectorObs( m_othersGoal.transform.position );
+		AddVectorObs( GetViewportPos( transform.position ) );
+		AddVectorObs( new Vector2( moves.body.velocity.x, moves.body.velocity.y ).normalized );
+
+		//ally goal
+		AddVectorObs( GetViewportPos( m_myGoal.transform.position ) );
+		AddVectorObs( (int)m_myGoal.Team );
+
+		//enemy goal
+		AddVectorObs( GetViewportPos( m_othersGoal.transform.position ) );
 		AddVectorObs( (int)m_othersGoal.Team );
 
-		//AgentState
-		AddVectorObs( new Vector2( ( transform.position.x - 19.69f ) / ( 19.69f * 2f ), ( transform.position.y + 11 ) / 22f ) );
-		AddVectorObs( new Vector2( moves.rigidbody.velocity.x, moves.rigidbody.velocity.y ) );
-		AddVectorObs( transform.rotation.eulerAngles.z / 360f );
-		AddVectorObs( (int)m_myGoal.Team );
-
 		//junkState
-		for( int i = 0; i < 5; ++i )
-		{
-			if( i >= JunkSpawner.Instance.junkSpawned.Count )
-			{
-				AddVectorObs( 0 );
-				AddVectorObs( Vector2.zero );
-				AddVectorObs( Vector2.zero );
+		//for( int i = 0; i < 1; ++i )
+		//{
+		//	if( i >= JunkSpawner.Instance.junkCount )
+		//	{
+		//		//AddVectorObs( 0 );
+		//		AddVectorObs( Vector2.zero );
+		//		AddVectorObs( Vector2.zero );
 
-			}
-			else
-			{
-				AddVectorObs( 1 );
-				Transform junk = JunkSpawner.Instance.junkSpawned[i].transform;
-				AddVectorObs( new Vector2( ( junk.position.x - 19.69f ) / ( 19.69f * 2f ), ( junk.position.y + 11 ) / 22f ) );
-				Vector3 velocity = junk.GetComponent<Rigidbody>().velocity;
-				AddVectorObs( new Vector2( velocity.x, velocity.y ) );
-			}
+		//	}
+		//	else
+		//	{
+		//		//AddVectorObs( 1 );
+
+		//		Junk junk = JunkSpawner.Instance.GetJunk( i );
+
+		//		AddVectorObs( GetViewportPos( junk.transform.position ) );
+		//		AddVectorObs( new Vector2( junk.body.velocity.x, junk.body.velocity.y ).normalized );
+		//	}
+		//}
+
+		Junk junk = JunkSpawner.Instance.GetJunk( 0 );
+
+		if( junk != null && junk.body != null )
+		{
+			AddVectorObs( GetViewportPos( junk.transform.position ) );
+			AddVectorObs( new Vector2( junk.body.velocity.x, junk.body.velocity.y ).normalized );
 		}
-
-		//if( CollectiblesSpawners.Instance.currentBonus != null )
-		//{
-		//	AddVectorObs( 2 );
-
-		//	Transform trans = CollectiblesSpawners.Instance.currentBonus.transform;
-		//	AddVectorObs( new Vector2( ( trans.position.x - 19.69f ) / ( 19.69f * 2f ), ( trans.position.y + 11 ) / 22f ) );
-		//	Vector3 velocity = CollectiblesSpawners.Instance.currentBonus.GetComponent<Rigidbody>().velocity;
-		//	AddVectorObs( new Vector2( velocity.x, velocity.y ) );
-		//}
-		//else
-		//{
-		//	AddVectorObs( 0 );
-		//	AddVectorObs( Vector2.zero );
-		//	AddVectorObs( Vector2.zero );
-		//}
-
-		//if( CollectiblesSpawners.Instance.currentMalus != null )
-		//{
-		//	AddVectorObs( 3 );
-
-		//	Transform trans = CollectiblesSpawners.Instance.currentMalus.transform;
-		//	AddVectorObs( new Vector2( ( trans.position.x - 19.69f ) / ( 19.69f * 2f ), ( trans.position.y + 11 ) / 22f ) );
-		//	Vector3 velocity = CollectiblesSpawners.Instance.currentMalus.GetComponent<Rigidbody>().velocity;
-		//	AddVectorObs( new Vector2( velocity.x, velocity.y ) );
-		//}
-		//else
+		else
 		{
-			AddVectorObs( 0 );
 			AddVectorObs( Vector2.zero );
 			AddVectorObs( Vector2.zero );
 		}
+	}
+
+	private Vector2 GetViewportPos( Vector3 _position )
+	{
+		return Camera.main.WorldToViewportPoint( _position );
 	}
 
 	public override void AgentAction( float[] vectorAction, string textAction )
@@ -118,41 +100,42 @@ public class ShipsAgent : Agent
 		if( vectorAction[0] != .0f && vectorAction[1] != .0f && vectorAction[0] <= 1f && vectorAction[1] <= 1f && vectorAction[0] >= -1f && vectorAction[1] >= -1f )
 		{
 			moves.Move( Vector2.ClampMagnitude( new Vector2( vectorAction[0], vectorAction[1] ), 1f ) );
-			AddReward( .01f );
+			AddReward( .001f );
 		}
 
-		if( vectorAction[2] < .5f && !isCharging )
+		if( !attacks.isCharging && vectorAction[ 2] >= .5f )
 		{
 			attacks.Charge();
-			AddReward( .01f );
-			isCharging = true;
+			AddReward( .07f );
 		}
-		else if( vectorAction[2] >= .5f && isCharging )
+		else if( attacks.isCharging && vectorAction[ 2 ] > 0 && vectorAction[2] < .5f )
 		{
-			AddReward( .02f );
 			attacks.Shock();
-			isCharging = false;
+			
+			AddReward( .015f * attacks.normalizedCharge );
 		}
+
+		AddReward( -.005f );
 	}
 
-	void LateUpdate()
+	public void PlayerLoose()
 	{
-		SetReward( Mathf.Clamp( GetReward(), -1f, 1f ) );
-	}
-
-	public void PlayerDone()
-	{
-//		Done();
 		SetReward( -1f );
+		Debug.LogError( "Player Loose" );
+		Done();
 	}
 
 	public void PlayerWin()
 	{
-//		Done();
 		SetReward( 1f );
+		Debug.LogError( "Player Win" );
+		Done();
 	}
 
 	public override void AgentReset()
 	{
+		moves.body.velocity = Vector3.zero;
+
+		transform.position = Camera.main.ViewportToWorldPoint( new Vector3( .2f, .5f, 0F ) ).WithZ( moves.body.position.z );
 	}
 }

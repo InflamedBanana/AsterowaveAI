@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using MLAgents;
+﻿using MLAgents;
+using UnityEngine;
 
 public class ShipsAcademy : Academy
 {
@@ -15,11 +15,13 @@ public class ShipsAcademy : Academy
 	{
 		JunkSpawner.Instance.CleanJunks();
 		//CollectiblesSpawners.Instance.ClearCollectibles();
-
+		Debug.Log( "RESET" );
 		foreach( Goal g in FindObjectsOfType<Goal>() )
 		{
 			g.ResetGoal();
 		}
+
+		base.AcademyReset();
 	}
 
 	public override void AcademyStep()

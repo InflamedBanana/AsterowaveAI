@@ -24,6 +24,6 @@ public class BorderCollision: MonoBehaviour
 			collision.collider.GetComponent<Rigidbody>().AddForce( ( collision.collider.transform.position - transform.position ).normalized, ForceMode.Impulse );
 
 		if( collision.collider.GetComponent<ShipsAgent>() )
-			collision.collider.GetComponent<ShipsAgent>().AddReward( -.05f );
+			collision.collider.GetComponent<ShipsAgent>().AddReward( -.25f );
 	}
 }

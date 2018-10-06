@@ -28,7 +28,7 @@ public class ShipsBrain : Brain, Decision
 
 //			return act.ToArray();
 //		}
-		Debug.Log( "dafuck" );
+
 		// If the vector action space type is discrete, then we don't do anything.     
 		return new float[3] { 1f, 1f, 1f };
 	}

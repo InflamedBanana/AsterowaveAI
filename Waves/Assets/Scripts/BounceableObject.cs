@@ -9,13 +9,14 @@ public class BounceableObject : MonoBehaviour
 
 	List <ShockWave> shockWavesAlreadyHurt = new List <ShockWave> ();
 
-	Action<GameObject> onDestroy;
+	Action<BounceableObject> onDestroy;
 
-	Rigidbody body;
+	Rigidbody m_body;
+	public Rigidbody body { get { return m_body; } }
 
 	void Start ()
 	{
-		body = GetComponent<Rigidbody> ();
+		m_body = GetComponent<Rigidbody> ();
 		Invoke ( "ActivateCollider", colliderDelay );
 	}
 
@@ -35,9 +36,9 @@ public class BounceableObject : MonoBehaviour
 
 		force *= bounceMultiplier * ( 1 - ( ( other.transform.localScale.x / 2 ) / shockWave.MaxRay ) );
 
-		body.velocity = Vector3.zero;
+		m_body.velocity = Vector3.zero;
 
-		body.AddForce ( force * 5, ForceMode.Impulse );
+		m_body.AddForce ( force * 5, ForceMode.Impulse );
 
 		shockWavesAlreadyHurt.Add ( shockWave );
 	}
@@ -45,7 +46,7 @@ public class BounceableObject : MonoBehaviour
 	public void RemoveObject()
 	{
 		if( onDestroy != null )
-			onDestroy( gameObject );
+			onDestroy( this );
 
 		Destroy( gameObject );
 	}
@@ -56,7 +57,7 @@ public class BounceableObject : MonoBehaviour
 	//		onDestroy ( gameObject );
 	//}
 
-	public Action<GameObject> OnDestroyAct
+	public Action<BounceableObject> OnDestroyAct
 	{
 		get
 		{
